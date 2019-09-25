@@ -8,7 +8,7 @@ const invalidCode = "const testArray = new Array(3);" +
   "const lastArr = [];";
 
   // todo прверка на объект
-  // const map = '_.map({a: 1}, (prop) => prop)';
+  const objectCheck = '_.map({a: 1}, (prop) => prop)';
 
   //todo проверка на переопределение
   // "const _ = {map: function(){}};" +
@@ -18,6 +18,9 @@ ruleTester.run("map-is-native", rule, {
   valid: [
     {
       code: 'const variable = collection.map(fn)'
+    },
+    {
+      code: objectCheck
     }
   ],
   invalid: [
