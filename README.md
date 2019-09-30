@@ -1,49 +1,45 @@
 # eslint-plugin-map-replace-plugin
 
-this plugin replace lodash map method to nativ array.map
+Плагин проверяет возможность использования нативного метода
+`Array.map` вместо реализации lodash `_.map()`
 
-## Installation
+## Установка
 
-You'll first need to install [ESLint](http://eslint.org):
+Установите [ESLint](http://eslint.org):
 
 ```
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-map-replace-plugin`:
+Затем установите [eslint-plugin-lodash-to-native](https://github.com/WD-man/eslint-plugin-lodash-to-native):
 
 ```
-$ npm install eslint-plugin-map-replace-plugin --save-dev
+$ npm install npm i -D https://github.com/WD-man/eslint-plugin-lodash-to-native
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-map-replace-plugin` globally.
+## Использование
 
-## Usage
-
-Add `map-replace-plugin` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Добавь `map-replace-plugin` в секцию плагинов `.eslintrc` файла конфигурации. префикс `eslint-plugin-` можно опустить:
 
 ```json
 {
     "plugins": [
-        "map-replace-plugin"
+        "lodash-to-native"
     ]
 }
 ```
 
 
-Then configure the rules you want to use under the rules section.
+Затем добавь правило в секцию правил
 
 ```json
 {
     "rules": {
-        "map-replace-plugin/rule-name": 2
+        "lodash-to-native/map-is-native": 2
     }
 }
 ```
 
-## Supported Rules
-
-* Fill in provided rules here
 
 
 
